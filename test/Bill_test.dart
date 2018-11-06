@@ -39,9 +39,4 @@ void main(){
     expect(result, false);
   });
 
-  //test('Construct_BadValue_ThrowException', ()
-  //  {
-  //    expect(new Bill(-1), new ArgumentError(-1) );
-  //  }
-  //);
 }
