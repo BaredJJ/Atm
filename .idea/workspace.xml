@@ -29,20 +29,20 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dart" value="1805" />
+          <entry key="dart" value="2469" />
           <entry key="yaml" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Dart" value="1805" />
+          <entry key="Dart" value="2469" />
           <entry key="YAML" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="2" />
-          <entry key="dart" value="14" />
+          <entry key="dart" value="15" />
           <entry key="html" value="2" />
           <entry key="md" value="1" />
         </counts>
@@ -50,7 +50,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="2" />
-          <entry key="Dart" value="14" />
+          <entry key="Dart" value="15" />
           <entry key="HTML" value="2" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
@@ -77,13 +77,25 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/BillContainer_test.dart">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="457">
               <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/src/Atm.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="559">
+              <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+              <folding>
+                <element signature="e#0#29#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -122,6 +134,7 @@
         <option value="$PROJECT_DIR$/test/BillContainer_test.dart" />
         <option value="$PROJECT_DIR$/test/Bill_test.dart" />
         <option value="$PROJECT_DIR$/lib/src/BillContainer.dart" />
+        <option value="$PROJECT_DIR$/lib/src/Atm.dart" />
       </list>
     </option>
   </component>
@@ -235,51 +248,51 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1541531376516</updated>
-      <workItem from="1541531382722" duration="5251000" />
+      <workItem from="1541531382722" duration="6249000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="tests_in_BillContainer_test_dart - 2018.11.06 at 23h 38m 04s.xml">
+    <history-entry file="tests_in_Bill_test_dart - 2018.11.06 at 23h 53m 16s.xml">
+      <configuration name="tests in Bill_test.dart" configurationId="DartTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="tests_in_BillContainer_test_dart - 2018.11.06 at 23h 53m 16s.xml">
       <configuration name="tests in BillContainer_test.dart" configurationId="DartTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="tests_in_Bill_test_dart - 2018.11.06 at 23h 38m 04s.xml">
+    <history-entry file="tests_in_Bill_test_dart - 2018.11.06 at 23h 53m 39s.xml">
       <configuration name="tests in Bill_test.dart" configurationId="DartTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="tests_in_BillContainer_test_dart - 2018.11.06 at 23h 38m 16s.xml">
+    <history-entry file="tests_in_BillContainer_test_dart - 2018.11.06 at 23h 53m 39s.xml">
       <configuration name="tests in BillContainer_test.dart" configurationId="DartTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="tests_in_Bill_test_dart - 2018.11.06 at 23h 38m 16s.xml">
+    <history-entry file="tests_in_Bill_test_dart - 2018.11.06 at 23h 53m 50s.xml">
       <configuration name="tests in Bill_test.dart" configurationId="DartTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="tests_in_BillContainer_test_dart - 2018.11.06 at 23h 38m 29s.xml">
+    <history-entry file="tests_in_BillContainer_test_dart - 2018.11.06 at 23h 53m 51s.xml">
       <configuration name="tests in BillContainer_test.dart" configurationId="DartTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="tests_in_Bill_test_dart - 2018.11.06 at 23h 38m 29s.xml">
+    <history-entry file="tests_in_Bill_test_dart - 2018.11.06 at 23h 54m 04s.xml">
       <configuration name="tests in Bill_test.dart" configurationId="DartTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="tests_in_Bill_test_dart - 2018.11.06 at 23h 39m 00s.xml">
-      <configuration name="tests in Bill_test.dart" configurationId="DartTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="tests_in_BillContainer_test_dart - 2018.11.06 at 23h 39m 01s.xml">
+    <history-entry file="tests_in_BillContainer_test_dart - 2018.11.06 at 23h 54m 05s.xml">
       <configuration name="tests in BillContainer_test.dart" configurationId="DartTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="tests_in_Bill_test_dart - 2018.11.06 at 23h 39m 12s.xml">
+    <history-entry file="tests_in_Bill_test_dart - 2018.11.06 at 23h 54m 48s.xml">
       <configuration name="tests in Bill_test.dart" configurationId="DartTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="tests_in_BillContainer_test_dart - 2018.11.06 at 23h 39m 12s.xml">
+    <history-entry file="tests_in_BillContainer_test_dart - 2018.11.06 at 23h 54m 48s.xml">
       <configuration name="tests in BillContainer_test.dart" configurationId="DartTestRunConfigurationType" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5251000" />
+    <option name="totallyTimeSpent" value="6249000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17913593" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17913593" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Dart Analysis" weight="0.21800433" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
@@ -289,7 +302,7 @@
       <window_info anchor="bottom" id="Messages" weight="0.46721312" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.329718" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.329718" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -403,6 +416,16 @@
           <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/Atm.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="559">
+          <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
           </folding>
         </state>
       </provider>
