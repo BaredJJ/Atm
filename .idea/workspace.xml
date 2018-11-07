@@ -23,77 +23,51 @@
     <session id="1795114439">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dart" value="2469" />
-          <entry key="yaml" value="19" />
+          <entry key="dart" value="3645" />
+          <entry key="yaml" value="42" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Dart" value="2469" />
-          <entry key="YAML" value="19" />
+          <entry key="Dart" value="3645" />
+          <entry key="YAML" value="42" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="2" />
-          <entry key="dart" value="15" />
+          <entry key="dart" value="16" />
           <entry key="html" value="2" />
           <entry key="md" value="1" />
+          <entry key="yaml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="2" />
-          <entry key="Dart" value="15" />
+          <entry key="Dart" value="16" />
           <entry key="HTML" value="2" />
           <entry key="PLAIN_TEXT" value="1" />
+          <entry key="YAML" value="1" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/src/IBillContainer.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/src/BillContainer.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="29" lean-forward="true" selection-start-column="29" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/BillContainer_test.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="457">
-              <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/src/Atm.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="559">
-              <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+            <state relative-caret-position="374">
+              <caret line="28" column="57" selection-start-line="28" selection-start-column="57" selection-end-line="28" selection-end-column="57" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
@@ -102,10 +76,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/FakeBill.dart">
+        <entry file="file://$PROJECT_DIR$/pubspec.yaml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
-              <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+              <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/Atm_test.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="32" column="53" lean-forward="true" selection-start-line="32" selection-start-column="53" selection-end-line="32" selection-end-column="53" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -125,15 +111,16 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pubspec.yaml" />
         <option value="$PROJECT_DIR$/lib/app_component.dart" />
         <option value="$PROJECT_DIR$/lib/src/Bill.dart" />
         <option value="$PROJECT_DIR$/lib/src/IBill.dart" />
         <option value="$PROJECT_DIR$/lib/src/IBillContainer.dart" />
         <option value="$PROJECT_DIR$/test/FakeBill.dart" />
-        <option value="$PROJECT_DIR$/test/BillContainer_test.dart" />
         <option value="$PROJECT_DIR$/test/Bill_test.dart" />
         <option value="$PROJECT_DIR$/lib/src/BillContainer.dart" />
+        <option value="$PROJECT_DIR$/pubspec.yaml" />
+        <option value="$PROJECT_DIR$/test/BillContainer_test.dart" />
+        <option value="$PROJECT_DIR$/test/Atm_test.dart" />
         <option value="$PROJECT_DIR$/lib/src/Atm.dart" />
       </list>
     </option>
@@ -144,7 +131,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="156" />
     <option name="y" value="57" />
     <option name="width" value="1400" />
@@ -156,7 +143,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -193,6 +179,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -212,7 +199,18 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Dart Test.tests in BillContainer_test.dart">
+  <component name="RunManager" selected="Dart Test.tests in Atm_test.dart">
+    <configuration name="GetMoney_ValidArgument_CheckReturnValue in Atm_test.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/test/Atm_test.dart" />
+      <option name="scope" value="GROUP_OR_TEST_BY_NAME" />
+      <option name="testName" value="GetMoney_ValidArgument_CheckReturnValue" />
+      <method v="2" />
+    </configuration>
+    <configuration name="tests in Atm_test.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/test/Atm_test.dart" />
+      <option name="testName" value="Atm_test.dart" />
+      <method v="2" />
+    </configuration>
     <configuration name="tests in BillContainer_test.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
       <option name="filePath" value="$PROJECT_DIR$/test/BillContainer_test.dart" />
       <option name="testName" value="BillContainer_test.dart" />
@@ -230,9 +228,13 @@
       <item itemvalue="JavaScript Debug.index.html" />
       <item itemvalue="Dart Test.tests in Bill_test.dart" />
       <item itemvalue="Dart Test.tests in BillContainer_test.dart" />
+      <item itemvalue="Dart Test.tests in Atm_test.dart" />
+      <item itemvalue="Dart Test.GetMoney_ValidArgument_CheckReturnValue in Atm_test.dart" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Dart Test.tests in Atm_test.dart" />
+        <item itemvalue="Dart Test.GetMoney_ValidArgument_CheckReturnValue in Atm_test.dart" />
         <item itemvalue="Dart Test.tests in BillContainer_test.dart" />
         <item itemvalue="Dart Test.tests in Bill_test.dart" />
       </list>
@@ -248,65 +250,66 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1541531376516</updated>
-      <workItem from="1541531382722" duration="6249000" />
+      <workItem from="1541531382722" duration="6446000" />
+      <workItem from="1541569169630" duration="2641000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="tests_in_Bill_test_dart - 2018.11.06 at 23h 53m 16s.xml">
+    <history-entry file="tests_in_Bill_test_dart - 2018.11.06 at 23h 58m 20s.xml">
       <configuration name="tests in Bill_test.dart" configurationId="DartTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="tests_in_BillContainer_test_dart - 2018.11.06 at 23h 53m 16s.xml">
+    <history-entry file="tests_in_BillContainer_test_dart - 2018.11.06 at 23h 58m 20s.xml">
       <configuration name="tests in BillContainer_test.dart" configurationId="DartTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="tests_in_Bill_test_dart - 2018.11.06 at 23h 53m 39s.xml">
+    <history-entry file="tests_in_Bill_test_dart - 2018.11.06 at 23h 58m 34s.xml">
       <configuration name="tests in Bill_test.dart" configurationId="DartTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="tests_in_BillContainer_test_dart - 2018.11.06 at 23h 53m 39s.xml">
+    <history-entry file="tests_in_BillContainer_test_dart - 2018.11.06 at 23h 58m 35s.xml">
       <configuration name="tests in BillContainer_test.dart" configurationId="DartTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="tests_in_Bill_test_dart - 2018.11.06 at 23h 53m 50s.xml">
+    <history-entry file="tests_in_Bill_test_dart - 2018.11.06 at 23h 58m 47s.xml">
       <configuration name="tests in Bill_test.dart" configurationId="DartTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="tests_in_BillContainer_test_dart - 2018.11.06 at 23h 53m 51s.xml">
+    <history-entry file="tests_in_BillContainer_test_dart - 2018.11.06 at 23h 58m 47s.xml">
       <configuration name="tests in BillContainer_test.dart" configurationId="DartTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="tests_in_Bill_test_dart - 2018.11.06 at 23h 54m 04s.xml">
-      <configuration name="tests in Bill_test.dart" configurationId="DartTestRunConfigurationType" />
+    <history-entry file="tests_in_Atm_test_dart - 2018.11.07 at 09h 20m 15s.xml">
+      <configuration name="tests in Atm_test.dart" configurationId="DartTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="tests_in_BillContainer_test_dart - 2018.11.06 at 23h 54m 05s.xml">
-      <configuration name="tests in BillContainer_test.dart" configurationId="DartTestRunConfigurationType" />
+    <history-entry file="GetMoney_ValidArgument_CheckReturnValue_in_Atm_test_dart - 2018.11.07 at 09h 21m 44s.xml">
+      <configuration name="GetMoney_ValidArgument_CheckReturnValue in Atm_test.dart" configurationId="DartTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="tests_in_Bill_test_dart - 2018.11.06 at 23h 54m 48s.xml">
-      <configuration name="tests in Bill_test.dart" configurationId="DartTestRunConfigurationType" />
+    <history-entry file="tests_in_Atm_test_dart - 2018.11.07 at 09h 23m 27s.xml">
+      <configuration name="tests in Atm_test.dart" configurationId="DartTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="tests_in_BillContainer_test_dart - 2018.11.06 at 23h 54m 48s.xml">
-      <configuration name="tests in BillContainer_test.dart" configurationId="DartTestRunConfigurationType" />
+    <history-entry file="tests_in_Atm_test_dart - 2018.11.07 at 09h 23m 43s.xml">
+      <configuration name="tests in Atm_test.dart" configurationId="DartTestRunConfigurationType" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6249000" />
+    <option name="totallyTimeSpent" value="9087000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17913593" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17913593" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Dart Analysis" weight="0.21800433" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" weight="0.3295082" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" weight="0.46721312" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.329718" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.329718" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Dart Analysis" order="7" weight="0.21800433" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3286334" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.46637744" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -328,29 +331,17 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/pubspec.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/main.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="7" lean-forward="true" selection-start-column="7" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/app_component.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/src/todo_list/todo_list_component.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/src/todo_list/todo_list_component.css" />
     <entry file="file://$PROJECT_DIR$/test/app_test.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -383,16 +374,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="474">
           <caret line="40" column="2" selection-start-line="40" selection-start-column="2" selection-end-line="40" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/FakeBill.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -406,26 +387,50 @@
     <entry file="file://$PROJECT_DIR$/lib/src/BillContainer.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="29" lean-forward="true" selection-start-column="29" selection-end-column="29" />
+          <caret column="29" selection-start-column="29" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/BillContainer_test.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
+        <state>
+          <caret selection-end-line="2" selection-end-column="23" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/FakeBill.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pubspec.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/src/Atm.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="559">
-          <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+        <state relative-caret-position="374">
+          <caret line="28" column="57" selection-start-line="28" selection-start-column="57" selection-end-line="28" selection-end-column="57" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Atm_test.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="32" column="53" lean-forward="true" selection-start-line="32" selection-start-column="53" selection-end-line="32" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>

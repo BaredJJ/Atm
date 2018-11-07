@@ -15,17 +15,18 @@ class Atm{
   Map<IBill, int> GetMoney(int cash){
 
     var money = new Map<IBill,int>();
-    var lenght = _billContainer.Count;
+    var length = _billContainer.Count;
 
-    for(int i = 0; i < lenght; i++)
+    for(int i = 0; i < length; i++)
       {
         var bill = _billContainer.Bills[i];
         if(bill.Value > cash) continue;
 
         var count = 0;
-        if(cash % bill.Value == 0 && i != lenght - 1 && money.length == 0)
+        if(cash % bill.Value == 0 && i != length - 1)
           {
             var temp = ((cash / bill.Value) - 1).toInt();
+            if(temp == 0 &&  money.length == 0) continue;
             cash -= bill.Value * temp;//TODO Дубляж
             count = temp;
           }
