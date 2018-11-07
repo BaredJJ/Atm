@@ -22,25 +22,21 @@ class Atm{
         var bill = _billContainer.Bills[i];
         if(bill.Value > cash) continue;
 
-        var count = 0;
-        if(cash % bill.Value == 0 && i != length - 1)
+        var countBills = bill.CountBill(cash);
+        if(bill.Change(cash) == 0 && i != length - 1)
           {
-            var temp = ((cash / bill.Value) - 1).toInt();
-            if(temp == 0 &&  money.length == 0) continue;
-            cash -= bill.Value * temp;//TODO Дубляж
-            count = temp;
-          }
-        else
-          {
-            var temp = (cash / bill.Value).toInt();
-            cash -= bill.Value * temp;//TODO Дубляж
-            count = temp;
+            if(countBills == 0 &&  money.length == 0) continue;
+
+            countBills--;
           }
 
-        if(count > 0)
-          money.putIfAbsent(bill, () => count);
+        cash -= bill.Cash(countBills);
+
+        if(countBills > 0)
+          money.putIfAbsent(bill, () => countBills);
       }
 
       return money;
   }
+  
 }

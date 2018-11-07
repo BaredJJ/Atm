@@ -14,4 +14,10 @@ class FakeBill implements IBill{
 
     return bill.Value == Value;
   }
+
+  int Cash(int count) => _value * count;
+
+  int Change(int cash) => cash % _value;
+
+  int CountBill(int cash) => (cash / _value).toInt();
 }

@@ -42,6 +42,19 @@ void main(){
 
     expect(result, true);
   });
+
+  test("GetMoney_ValidArgument_CheckReturnValue", (){
+    var atm = GetAtm();
+
+    var money = atm.GetMoney(1);
+    var bills = money.keys.toList();
+    var countBills = money.values.toList();
+    var isBillsTrue = (bills[0].Value == 1);
+    var isCountTrue = (countBills[0] == 1);
+    var result = isBillsTrue && isCountTrue;
+
+    expect(result, true);
+  });
 }
 
 class FakeBillContainer extends Mock implements IBillContainer{}

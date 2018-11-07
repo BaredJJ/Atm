@@ -13,6 +13,12 @@ class Bill implements IBill{
 
   int get Value => _value;
 
+  int Cash(int count) => (count < 1) ? 0 : _value * count;
+
+  int Change(int cash) => (cash < 1) ? 0 : cash % _value;
+
+  int CountBill(int cash) => (cash < 1) ? 0 : (cash / _value).toInt();
+
   bool Equals(IBill bill){
     if(bill == null) return false;
     var castBill = bill as Bill;
