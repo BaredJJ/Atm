@@ -39,4 +39,48 @@ void main(){
     expect(result, false);
   });
 
+  test("Cash_BadArgument_ReturnZero", (){
+    var bill = new Bill(10);
+
+    expect(bill.Cash(-1), 0);
+  });
+
+  test("Cash_ValidArgument_ReturnMultiply", (){
+    var bill = new Bill(10);
+    int val = 10;
+    int standard = bill.Value * val;
+
+    expect(bill.Cash(val), standard);
+  });
+
+  test("Change_ValidArgument_ReturnChange", (){
+    var bill = new Bill(10);
+    int val = 10;
+    int standard = val % bill.Value;
+
+    expect(bill.Change(val), standard);
+  });
+
+  test("Change_BadArgument_ReturnZero", (){
+    var bill = new Bill(10);
+    int val = 0;
+
+    expect(bill.Change(val), 0);
+  });
+
+  test("CountBill_ValidArgument_ReturnCount", (){
+    var bill = new Bill(10);
+    int val = 10;
+    int standard = (val / bill.Value).toInt();
+
+    expect(bill.CountBill(val), standard);
+  });
+
+  test("Change_BadArgument_ReturnZero", (){
+    var bill = new Bill(10);
+    int val = 0;
+
+    expect(bill.CountBill(val), 0);
+  });
+
 }

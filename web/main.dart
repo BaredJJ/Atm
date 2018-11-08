@@ -1,56 +1,40 @@
 import 'dart:html';
-import 'ButtonClickEventHandler.dart';
+import 'AtmManager.dart';
+import 'HashMap.dart';
+import 'HashCode.dart';
 
 
 void main() {
 
-  var clickRadio = new RadioButtonEvent(GetMap());
+  var clickRadio = new HashMap(GetMap());
 
-  querySelector("#one_id").onClick.listen((e) => clickRadio.ButtonClick(e));
-  querySelector("#five_id").onClick.listen((e) => clickRadio.ButtonClick(e));
-  querySelector("#ten_id").onClick.listen((e) => clickRadio.ButtonClick(e));
-  querySelector("#fifteen_id").onClick.listen((e) => clickRadio.ButtonClick(e));
-  querySelector("#twenty_id").onClick.listen((e) => clickRadio.ButtonClick(e));
-  querySelector("#twenty_five_id").onClick.listen((e) => clickRadio.ButtonClick(e));
+  querySelector("#one_id").onClick.listen((e) => clickRadio.AddSelected(e));
+  querySelector("#five_id").onClick.listen((e) => clickRadio.AddSelected(e));
+  querySelector("#ten_id").onClick.listen((e) => clickRadio.AddSelected(e));
+  querySelector("#fifteen_id").onClick.listen((e) => clickRadio.AddSelected(e));
+  querySelector("#twenty_id").onClick.listen((e) => clickRadio.AddSelected(e));
+  querySelector("#twenty_five_id").onClick.listen((e) => clickRadio.AddSelected(e));
 
-  var buttonClick = new ButtonClickEventHandler();
-  querySelector("#button_id").onClick.listen((e) => buttonClick.ButtonClick(clickRadio.Selected, clickRadio.Count));
+  var buttonClick = new AtmManager();
+  querySelector("#button_id").onClick.listen((e) => buttonClick.PutMoney(clickRadio.Selected, clickRadio.Count));
 
 }
 
 
-Map<int,int> GetMap()
+List<HashCode> GetMap()
 {
-  var hashCodes = new Map<int, int>();
-  hashCodes.putIfAbsent(querySelector("#one_id").hashCode, () => 1);
-  hashCodes.putIfAbsent(querySelector("#five_id").hashCode, () => 5);
-  hashCodes.putIfAbsent(querySelector("#ten_id").hashCode, () => 10);
-  hashCodes.putIfAbsent(querySelector("#fifteen_id").hashCode, () => 15);
-  hashCodes.putIfAbsent(querySelector("#twenty_id").hashCode, () => 20);
-  hashCodes.putIfAbsent(querySelector("#twenty_five_id").hashCode, () => 25);
+  var hashCodes = new List<HashCode>();
+  hashCodes.add(new HashCode(querySelector("#one_id").hashCode,  1));
+  hashCodes.add(new HashCode(querySelector("#five_id").hashCode,  5));
+  hashCodes.add(new HashCode(querySelector("#ten_id").hashCode,  10));
+  hashCodes.add(new HashCode(querySelector("#fifteen_id").hashCode,  15));
+  hashCodes.add(new HashCode(querySelector("#twenty_id").hashCode,  20));
+  hashCodes.add(new HashCode(querySelector("#twenty_five_id").hashCode,  25));
 
   return hashCodes;
 }
 
-class RadioButtonEvent{
-  Map<int,int> _map;
-  List<int> _selectedElement;
 
-  RadioButtonEvent(Map<int, int> map){
-    _map = map;
-    _selectedElement = new List<int>();
-  }
-
-  List<int> get Selected => _selectedElement;
-  int get Count => _selectedElement.length;
-
-  void ButtonClick(Event e){
-    var value = _map[e.currentTarget.hashCode];
-    if(!_selectedElement.contains(value))
-          _selectedElement.add(value);
-    querySelector("#my_div_id").appendText(value.toString());
-  }
-}
 
 
 
