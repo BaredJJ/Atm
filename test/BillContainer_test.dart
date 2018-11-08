@@ -1,5 +1,5 @@
 import 'package:test/test.dart';
-import '../lib/src/BillContainer.dart';
+import '../web/lib/BillContainer.dart';
 import 'FakeBill.dart';
 
 void main(){

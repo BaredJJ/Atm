@@ -1,41 +1,57 @@
-import 'package:angular/angular.dart';
-import 'package:Atm/app_component.template.dart' as ng;
 import 'dart:html';
-
+import 'ButtonClickEventHandler.dart';
 
 
 void main() {
-  //runApp(ng.AppComponentNgFactory);
-  var values = GetListBoxValues();
-  var selection = Element.select();
-  selection.onChange.listen((e) => querySelector("#my_div_id").appendText(selection.text));
 
-  for(int i = 0; i < values.length; i++)
-    {
-      var optionTest = Element.option();
-      optionTest.text = values[i].toString();
-      selection.append(optionTest);
-    }
+  var clickRadio = new RadioButtonEvent(GetMap());
 
-  querySelector("#my_div_id").append(selection);
-  var clickEvent = new ButtonClicEvent();
-  querySelector("#button_id").onClick.listen((e) => clickEvent.ButtonClick());
+  querySelector("#one_id").onClick.listen((e) => clickRadio.ButtonClick(e));
+  querySelector("#five_id").onClick.listen((e) => clickRadio.ButtonClick(e));
+  querySelector("#ten_id").onClick.listen((e) => clickRadio.ButtonClick(e));
+  querySelector("#fifteen_id").onClick.listen((e) => clickRadio.ButtonClick(e));
+  querySelector("#twenty_id").onClick.listen((e) => clickRadio.ButtonClick(e));
+  querySelector("#twenty_five_id").onClick.listen((e) => clickRadio.ButtonClick(e));
+
+  var buttonClick = new ButtonClickEventHandler();
+  querySelector("#button_id").onClick.listen((e) => buttonClick.ButtonClick(clickRadio.Selected, clickRadio.Count));
+
 }
 
 
+Map<int,int> GetMap()
+{
+  var hashCodes = new Map<int, int>();
+  hashCodes.putIfAbsent(querySelector("#one_id").hashCode, () => 1);
+  hashCodes.putIfAbsent(querySelector("#five_id").hashCode, () => 5);
+  hashCodes.putIfAbsent(querySelector("#ten_id").hashCode, () => 10);
+  hashCodes.putIfAbsent(querySelector("#fifteen_id").hashCode, () => 15);
+  hashCodes.putIfAbsent(querySelector("#twenty_id").hashCode, () => 20);
+  hashCodes.putIfAbsent(querySelector("#twenty_five_id").hashCode, () => 25);
 
-List<int> GetListBoxValues() {
-  var values = new List<int>();
-
-  for (int i = 2; i < 10; i++)
-    values.add(i);
-
-  return values;
+  return hashCodes;
 }
 
-class ButtonClicEvent {
-  void ButtonClick() {
-    querySelector("#my_div_id").appendText("Yap yap");
+class RadioButtonEvent{
+  Map<int,int> _map;
+  List<int> _selectedElement;
+
+  RadioButtonEvent(Map<int, int> map){
+    _map = map;
+    _selectedElement = new List<int>();
+  }
+
+  List<int> get Selected => _selectedElement;
+  int get Count => _selectedElement.length;
+
+  void ButtonClick(Event e){
+    var value = _map[e.currentTarget.hashCode];
+    if(!_selectedElement.contains(value))
+          _selectedElement.add(value);
+    querySelector("#my_div_id").appendText(value.toString());
   }
 }
+
+
+
 

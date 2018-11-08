@@ -1,9 +1,9 @@
 import 'package:test/test.dart';
-import '../lib/src/IBillContainer.dart';
+import '../web/lib/IBillContainer.dart';
 import 'FakeBill.dart';
 import 'package:mockito/mockito.dart';
-import '../lib/src/IBill.dart';
-import '../lib/src/Atm.dart';
+import '../web/lib/IBill.dart';
+import '../web/lib/Atm.dart';
 
 void main(){
 

@@ -1,4 +1,4 @@
-import '../lib/src/IBill.dart';
+import '../web/lib/IBill.dart';
 
 class FakeBill implements IBill{
 

@@ -19,6 +19,9 @@ class Bill implements IBill{
 
   int CountBill(int cash) => (cash < 1) ? 0 : (cash / _value).toInt();
 
+  @override
+  String toString() => _value.toString();
+
   bool Equals(IBill bill){
     if(bill == null) return false;
     var castBill = bill as Bill;

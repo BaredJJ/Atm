@@ -27,6 +27,6 @@ class BillContainer implements IBillContainer{
       if(_bills[i].Equals(bill))
         return true;
 
-      return false;
+    return false;
   }
 }

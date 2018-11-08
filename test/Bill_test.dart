@@ -1,5 +1,5 @@
 import 'package:test/test.dart';
-import '../lib/src/Bill.dart';
+import '../web/lib/Bill.dart';
 
 void main(){
   test('Construct_ValidArgument_SetProperties', ()
