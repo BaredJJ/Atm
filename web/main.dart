@@ -3,35 +3,33 @@ import 'package:Atm/app_component.template.dart' as ng;
 import 'dart:html';
 
 void main() {
-  runApp(ng.AppComponentNgFactory);
-
+  //runApp(ng.AppComponentNgFactory);
   var values = GetListBoxValues();
-  //var listBox = new SelectElement();
-  SelectElement listBox = querySelector("#first");
 
-  var keys = values.keys.toList();
   for(int i = 0; i < values.length; i++)
-   {
-      var data = keys[i].toString();
-      var option = new OptionElement();
-      option.text = data;
-      option.value = data;
-      option.selected = false;
-     // var option = new Element.html("<option>" + keys[i].toString()+"</option");
-      listBox.options.add(option);
-      values[keys[i]] = option;
-   }
+    {
+      var option = GetOption(values[i]);
+      querySelector("#first_select_id").appendHtml(option);
+    }
 
-
-  //container.nodes.add(listBox);
-  //container.children.add(listBox);
+  var clickEvent = new ButtonClicEvent();
+  querySelector("#button_id").onClick.listen((e) => clickEvent.ButtonClick());
 }
 
-Map<int, OptionElement> GetListBoxValues(){
-  var values = new Map<int, OptionElement>();
+String GetOption(int value)=> "<option>" + value.toString() + "</option>";
 
-  for(int i = 2; i < 10; i++)
-    values.putIfAbsent(i, () => null);
+List<int> GetListBoxValues() {
+  var values = new List<int>();
+
+  for (int i = 2; i < 10; i++)
+    values.add(i);
 
   return values;
 }
+
+class ButtonClicEvent {
+  void ButtonClick() {
+    querySelector("#my_div_id").appendText("Yap yap");
+  }
+}
+
