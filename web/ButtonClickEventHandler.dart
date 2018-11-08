@@ -24,18 +24,22 @@ class ButtonClickEventHandler{
 
   void AtmWorked(Atm atm){
     while(true){
-      var result = context.callMethod('prompt', ['Please, enter cash']);
-      int value = int.parse(result);
-      if(value > 0)
+      String result = context.callMethod('prompt', ['Please, enter cash']);
+      var value = int.tryParse(result);
+      if(value is int)
         {
-          var money = atm.GetMoney(value);
-          var keys = money.keys.toList();
-          var values = money.values.toList();
-          String message = '';
-          for(int i = 0; i < keys.length; i++)
-            message += "Bill: " +keys[i].toString() + " - " + "Count: " + values[i].toString() + "\n";
+          if(value > 0) {
+            var money = atm.GetMoney(value);
+            var keys = money.keys.toList();
+            var values = money.values.toList();
+            String message = '';
+            for (int i = 0; i < keys.length; i++)
+              message += "Bill: " + keys[i].toString() + " - " + "Count: " +
+                  values[i].toString() + "\n";
 
-          context.callMethod('alert',[message]);
+            context.callMethod('alert', [message]);
+          }
+          else context.callMethod('alert',[_warning]);
         }
       else  context.callMethod('alert',[_warning]);
     }
