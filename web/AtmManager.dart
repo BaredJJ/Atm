@@ -10,42 +10,42 @@ class AtmManager{
   void PutMoney(List<int> values, int length) {
     if(length < 2)
       {
-        Alert(_notSelected);
+        _alert(_notSelected);
         return;
       }
 
     var billContainer = GetBillContainer(values);
-    var atm = new Atm(billContainer);
-    StartAtm(atm);
+    var atm = new Atm(billContainer);//todo вынести или создать фабрику
+    _startAtm(atm);
   }
 
-  void StartAtm(Atm atm){
+  void _startAtm(Atm atm){
     while(true){
       String result = context.callMethod('prompt', ['Please, enter cash']);
       var value = int.tryParse(result);
       if(value is int && value > 0)
         {
-            ShowMoney(atm, value);
+            _showMoney(atm, value);
         }
-      else  Alert(_warning);
+      else  _alert(_warning);
     }
   }
 
-  void Alert(String message) => context.callMethod('alert',[message]);
+  void _alert(String message) => context.callMethod('alert',[message]);
 
   BillContainer GetBillContainer(List<int> values){
-    var billContainer = new BillContainer();
+    var billContainer = new BillContainer();//todo вынести или создать фабрику
 
     values.sort();
     for(int i = values.length - 1; i >= 0; i--) {
-      var bill = new Bill(values[i]);
+      var bill = new Bill(values[i]);//todo вынести или создать фабрику
       billContainer.Add(bill);
     }
 
     return billContainer;
   }
 
-  void ShowMoney(Atm atm, int value){
+  void _showMoney(Atm atm, int value){
     var money = atm.GetMoney(value);//TODO возможно надо переделать на класс свозвращаемое значение
     var keys = money.keys.toList();
     var values = money.values.toList();
@@ -55,6 +55,6 @@ class AtmManager{
       message += "Bill: " + keys[i].toString() + " - " + "Count: " +
           values[i].toString() + "\n";
 
-    Alert(message);
+    _alert(message);
   }
 }

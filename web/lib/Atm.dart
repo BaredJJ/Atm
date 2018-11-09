@@ -12,10 +12,10 @@ class Atm{
     _billContainer = billContainer;
   }
 
-
+  //todo нужен рефакторинг
   Map<IBill, int> GetMoney(int cash){
 
-    var bills = GetMaxBill(cash);
+    var bills = _getMaxBill(cash);
     var moneys = new Map<IBill, int>();
 
     for(int i = 0; i < _billContainer.Count; i++){
@@ -31,10 +31,10 @@ class Atm{
             break;
           }
 
-          var count = CountOnNextStep(bills, cash - bill.Value);
+          var count = _getCountOnNextStep(bills, cash - bill.Value);
           if(bills.length - k - 1 > count ) break;
 
-          cash -= bill.Value;
+          cash -= bill.Value;//todo дубляж
           countBill++;
         }
 
@@ -45,19 +45,12 @@ class Atm{
     return moneys;
   }
 
-  List<IBill> GetMaxBill(int cash){
+  List<IBill> _getMaxBill(int cash){
 
     var maxBills = new List<IBill>();
     for(int k = 0; k < _billContainer.Count; k++) {
 
-      var bills = new List<IBill>();
-      for (int i = k; i < _billContainer.Count; i++) {
-        var bill = _billContainer.Bills[i];
-        if (bill.Value > cash) break;
-
-        cash -= bill.Value;
-        bills.add(bill);
-      }
+      var bills = _getCountBills(k, cash);
 
       if(bills.length > maxBills.length)
         maxBills = bills;
@@ -66,15 +59,30 @@ class Atm{
     return maxBills;
   }
 
-  int CountOnNextStep(List<IBill> bills, int cash){
+  List<IBill> _getCountBills(int startIndex, int cash){
+    var bills = new List<IBill>();
+
+    for (int i = startIndex; i < _billContainer.Count; i++) {
+      var bill = _billContainer.Bills[i];
+      if (bill.Value > cash) break;
+
+      cash -= bill.Value;
+      bills.add(bill);
+    }
+
+    return bills;
+  }
+
+  int _getCountOnNextStep(List<IBill> bills, int cash){
     var count = 0;
 
-    for(int i = 0; i < bills.length; i++)
-      if(bills[i].Value < cash)
-        {
-          cash -= bills[i].Value;
-          count++;
-        }
+    for(int i = 0; i < bills.length; i++) {
+      if (bills[i].Value < cash) {
+        cash -= bills[i].Value; //todo дубляж
+        count++;
+      }
+    }
+
     return count;
   }
 

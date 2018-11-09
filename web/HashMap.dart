@@ -14,7 +14,7 @@ class HashMap{
   int get Count => _selectedElement.length;
 
   void AddSelected(Event e){
-    var index = GetIndex(e.currentTarget.hashCode);
+    var index = _getIndex(e.currentTarget.hashCode);
     if(index == -1) return;
     var value = _map.elementAt(index);
 
@@ -23,7 +23,7 @@ class HashMap{
 
   }
 
-  int GetIndex(int hasCode){
+  int _getIndex(int hasCode){
     for(int i = 0; i < _map.length; i++)
       if(_map[i].Code == hasCode)
         return i;

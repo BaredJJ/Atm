@@ -43,6 +43,32 @@ void main(){
     expect(result, true);
   });
 
+  test("GetMoney_ValidArgument_ReturnFiveBills", (){
+    var atm = GetAtmSevenBills(GetSevenBills());
+
+    var money = atm.GetMoney(100);
+    var bills = money.keys.toList();
+    var countBills = money.values.toList();
+    var isBillsTrue = (bills[0].Value == 30 && bills[1].Value == 25 && bills[2].Value == 10 && bills[3].Value == 5 && bills[4].Value == 1);
+    var isCountTrue = (countBills[0] == 1 && countBills[1] == 2 && countBills[2] == 1 && countBills[3] == 1 && countBills[4] == 5);
+    var result = isBillsTrue && isCountTrue;
+
+    expect(result, true);
+  });
+
+  test("GetMoney_ValidArgument_ReturnSevenBills", (){
+    var atm = GetAtmSevenBills(GetSevenBills());
+
+    var money = atm.GetMoney(1000);
+    var bills = money.keys.toList();
+    var countBills = money.values.toList();
+    var isBillsTrue = (bills[0].Value == 100 && bills[1].Value == 50 && bills[2].Value == 30 && bills[3].Value == 25 && bills[4].Value == 10 && bills[5].Value == 5 && bills[6].Value == 1);
+    var isCountTrue = (countBills[0] == 8 && countBills[1] == 2 && countBills[2] == 1 && countBills[3] == 2 && countBills[4] == 1 && countBills[5] == 1 && countBills[6] == 5);
+    var result = isBillsTrue && isCountTrue;
+
+    expect(result, true);
+  });
+
   test("GetMoney_ValidArgument_CheckReturnValue", (){
     var atm = GetAtm();
 
@@ -59,10 +85,11 @@ void main(){
 
 class FakeBillContainer extends Mock implements IBillContainer{}
 
-Atm GetAtm() => new Atm(GetBillContainer());
+Atm GetAtm() => new Atm(GetBillContainer(GetBills()));
 
-IBillContainer GetBillContainer(){
-  var bills = GetBills();
+Atm GetAtmSevenBills(List<IBill> bills) => new Atm(GetBillContainer(bills));
+
+IBillContainer GetBillContainer(List<IBill> bills){
   var billContainer = FakeBillContainer();
 
   when(billContainer.Bills).thenReturn(bills);
@@ -81,3 +108,18 @@ List<IBill> GetBills(){
 
    return bills;
 }
+
+List<IBill> GetSevenBills(){
+  var bills = new List<IBill>();
+
+   bills.add(new FakeBill(100));
+   bills.add(new FakeBill(50));
+   bills.add(new FakeBill(30));
+   bills.add(new FakeBill(25));
+   bills.add(new FakeBill(10));
+   bills.add(new FakeBill(5));
+   bills.add(new FakeBill(1));
+
+   return bills;
+}
+
