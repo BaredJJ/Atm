@@ -44,7 +44,7 @@ void main(){
   });
 
   test("GetMoney_ValidArgument_ReturnFiveBills", (){
-    var atm = GetAtmSevenBills(GetSevenBills());
+    var atm = GetAtmDifferentBills(GetSevenBills());
 
     var money = atm.GetMoney(100);
     var bills = money.keys.toList();
@@ -57,13 +57,26 @@ void main(){
   });
 
   test("GetMoney_ValidArgument_ReturnSevenBills", (){
-    var atm = GetAtmSevenBills(GetSevenBills());
+    var atm = GetAtmDifferentBills(GetSevenBills());
 
     var money = atm.GetMoney(1000);
     var bills = money.keys.toList();
     var countBills = money.values.toList();
     var isBillsTrue = (bills[0].Value == 100 && bills[1].Value == 50 && bills[2].Value == 30 && bills[3].Value == 25 && bills[4].Value == 10 && bills[5].Value == 5 && bills[6].Value == 1);
     var isCountTrue = (countBills[0] == 8 && countBills[1] == 2 && countBills[2] == 1 && countBills[3] == 2 && countBills[4] == 1 && countBills[5] == 1 && countBills[6] == 5);
+    var result = isBillsTrue && isCountTrue;
+
+    expect(result, true);
+  });
+
+  test("GetMoney_ValidArgument_ReturnOneBills", (){
+    var atm = GetAtmDifferentBills(GetThreeBills());
+
+    var money = atm.GetMoney(40);
+    var bills = money.keys.toList();
+    var countBills = money.values.toList();
+    var isBillsTrue = (bills[0].Value == 20);
+    var isCountTrue = (countBills[0] == 2);
     var result = isBillsTrue && isCountTrue;
 
     expect(result, true);
@@ -87,7 +100,7 @@ class FakeBillContainer extends Mock implements IBillContainer{}
 
 Atm GetAtm() => new Atm(GetBillContainer(GetBills()));
 
-Atm GetAtmSevenBills(List<IBill> bills) => new Atm(GetBillContainer(bills));
+Atm GetAtmDifferentBills(List<IBill> bills) => new Atm(GetBillContainer(bills));
 
 IBillContainer GetBillContainer(List<IBill> bills){
   var billContainer = FakeBillContainer();
@@ -119,6 +132,15 @@ List<IBill> GetSevenBills(){
    bills.add(new FakeBill(10));
    bills.add(new FakeBill(5));
    bills.add(new FakeBill(1));
+
+   return bills;
+}
+
+List<IBill> GetThreeBills(){
+  var bills = new List<IBill>();
+
+   bills.add(new FakeBill(25));
+   bills.add(new FakeBill(20));
 
    return bills;
 }

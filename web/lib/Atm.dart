@@ -4,6 +4,8 @@ import 'IBill.dart';
 class Atm{
 
   IBillContainer _billContainer;
+  int _cash;
+  int _MaxValue = 2147483647;
 
   Atm(IBillContainer billContainer){
     if(billContainer == null)
@@ -15,75 +17,55 @@ class Atm{
   //todo нужен рефакторинг
   Map<IBill, int> GetMoney(int cash){
 
-    var bills = _getMaxBill(cash);
-    var moneys = new Map<IBill, int>();
+    var maxBills = new Map<IBill, int>();
+    int tempChange = _MaxValue;
 
-    for(int i = 0; i < _billContainer.Count; i++){
-      for(int k = 0; k < bills.length; k++)
-      {
-        var bill = _billContainer.Bills[i];
-        if(bill != bills[k]) continue;
-        var countBill = 0;
-
-        while(true){
-          if(k == bills.length - 1){
-            countBill = bills[k].CountBill(cash);
-            break;
-          }
-
-          var count = _getCountOnNextStep(bills, cash - bill.Value);
-          if(bills.length - k - 1 > count ) break;
-
-          cash -= bill.Value;//todo дубляж
-          countBill++;
-        }
-
-        moneys.putIfAbsent(bill, () => countBill);
-      }
-    }
-
-    return moneys;
-  }
-
-  List<IBill> _getMaxBill(int cash){
-
-    var maxBills = new List<IBill>();
     for(int k = 0; k < _billContainer.Count; k++) {
 
-      var bills = _getCountBills(k, cash);
+      var bills = _getBills(k, cash);
 
-      if(bills.length > maxBills.length)
+      if(bills.length > maxBills.length || (_cash >= 0 && _cash < tempChange && bills.length == maxBills.length)){
         maxBills = bills;
+        tempChange = _cash;
+      }
     }
 
     return maxBills;
   }
 
-  List<IBill> _getCountBills(int startIndex, int cash){
-    var bills = new List<IBill>();
+
+  Map<IBill, int> _getBills(int startIndex,  int cash){
+    var bills = new Map<IBill, int>();
+    _cash = cash;
 
     for (int i = startIndex; i < _billContainer.Count; i++) {
       var bill = _billContainer.Bills[i];
       if (bill.Value > cash) break;
 
       cash -= bill.Value;
-      bills.add(bill);
+      bills.putIfAbsent(bill, () => 1);
     }
 
+    bills = _fillCountBills(bills, cash);
     return bills;
   }
 
-  int _getCountOnNextStep(List<IBill> bills, int cash){
-    var count = 0;
+  Map<IBill, int> _fillCountBills(Map<IBill, int> bills, int cash){
 
-    for(int i = 0; i < bills.length; i++) {
-      if (bills[i].Value < cash) {
-        cash -= bills[i].Value; //todo дубляж
-        count++;
-      }
+    if(bills.length < 1) return bills;
+
+    var billsList = bills.keys.toList();
+    if(cash > 0 && cash >= billsList[billsList.length - 1].Value){
+
+      for(int i = 0; i < billsList.length; i++)
+        if(cash >= billsList[i].Value){
+          bills[billsList[i]] += billsList[i].CountBill(cash);
+          cash = billsList[i].Change(cash);
+        }
     }
 
-    return count;
+    _cash = cash;
+    return bills;
   }
 
 }
