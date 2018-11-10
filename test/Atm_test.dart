@@ -49,8 +49,8 @@ void main(){
     var money = atm.GetMoney(100);
     var bills = money.keys.toList();
     var countBills = money.values.toList();
-    var isBillsTrue = (bills[0].Value == 30 && bills[1].Value == 25 && bills[2].Value == 10 && bills[3].Value == 5 && bills[4].Value == 1);
-    var isCountTrue = (countBills[0] == 1 && countBills[1] == 2 && countBills[2] == 1 && countBills[3] == 1 && countBills[4] == 5);
+    var isBillsTrue = (bills[0].Value == 50 && bills[1].Value == 25 && bills[2].Value == 10 && bills[3].Value == 5 && bills[4].Value == 1);
+    var isCountTrue = (countBills[0] == 1 && countBills[1] == 1 && countBills[2] == 1 && countBills[3] == 2 && countBills[4] == 5);
     var result = isBillsTrue && isCountTrue;
 
     expect(result, true);
@@ -70,7 +70,7 @@ void main(){
   });
 
   test("GetMoney_ValidArgument_ReturnOneBills", (){
-    var atm = GetAtmDifferentBills(GetThreeBills());
+    var atm = GetAtmDifferentBills(GetTwoBills());
 
     var money = atm.GetMoney(40);
     var bills = money.keys.toList();
@@ -82,7 +82,7 @@ void main(){
     expect(result, true);
   });
 
-  test("GetMoney_ValidArgument_CheckReturnValue", (){
+  test("GetMoney_ValidArgument_CheckOneValue", (){
     var atm = GetAtm();
 
     var money = atm.GetMoney(1);
@@ -136,11 +136,22 @@ List<IBill> GetSevenBills(){
    return bills;
 }
 
-List<IBill> GetThreeBills(){
+List<IBill> GetTwoBills(){
   var bills = new List<IBill>();
 
    bills.add(new FakeBill(25));
    bills.add(new FakeBill(20));
+
+   return bills;
+}
+
+List<IBill> GetFourBills(){
+  var bills = new List<IBill>();
+
+   bills.add(new FakeBill(25));
+   bills.add(new FakeBill(20));
+   bills.add(new FakeBill(15));
+   bills.add(new FakeBill(1));
 
    return bills;
 }

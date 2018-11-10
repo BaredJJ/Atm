@@ -2,8 +2,8 @@
 <project version="4">
   <component name="AutoTestManager">
     <enabled-run-configurations>
-      <run-configuration type="DartTestRunConfigurationType" name="tests in Bill_test.dart" />
       <run-configuration type="DartTestRunConfigurationType" name="tests in BillContainer_test.dart" />
+      <run-configuration type="DartTestRunConfigurationType" name="tests in Bill_test.dart" />
     </enabled-run-configurations>
   </component>
   <component name="ChangeListManager">
@@ -28,9 +28,9 @@
     <session id="1795114439">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="17" />
+          <entry key="project.closed" value="18" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.10" value="3" />
+          <entry key="project.open.time.10" value="4" />
           <entry key="project.open.time.11" value="3" />
           <entry key="project.open.time.12" value="4" />
           <entry key="project.open.time.13" value="1" />
@@ -38,12 +38,12 @@
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.22" value="1" />
           <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="17" />
+          <entry key="project.opened" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dart" value="12591" />
+          <entry key="dart" value="12881" />
           <entry key="html" value="565" />
           <entry key="lock" value="1" />
           <entry key="yaml" value="155" />
@@ -51,7 +51,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Dart" value="12591" />
+          <entry key="Dart" value="12881" />
           <entry key="HTML" value="565" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="YAML" value="155" />
@@ -61,7 +61,7 @@
         <counts>
           <entry key="Dart" value="1" />
           <entry key="css" value="2" />
-          <entry key="dart" value="73" />
+          <entry key="dart" value="74" />
           <entry key="html" value="4" />
           <entry key="lock" value="2" />
           <entry key="md" value="1" />
@@ -72,7 +72,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="2" />
-          <entry key="Dart" value="74" />
+          <entry key="Dart" value="75" />
           <entry key="HTML" value="4" />
           <entry key="PLAIN_TEXT" value="4" />
           <entry key="YAML" value="4" />
@@ -82,29 +82,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/lib/Atm.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1161">
-              <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
+            <state relative-caret-position="681">
+              <caret line="41" column="4" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/test_api-0.2.1/lib/src/frontend/expect.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="159" column="29" selection-start-line="159" selection-start-column="29" selection-end-line="159" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/Atm_test.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="81" column="4" selection-start-line="81" selection-start-column="4" selection-end-line="81" selection-end-column="4" />
+            <state relative-caret-position="246">
+              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
             </state>
           </provider>
         </entry>
@@ -130,6 +121,8 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>cash</find>
+      <find>GetThreeBills</find>
+      <find>GetMoney_ValidArgument_CheckReturnValue</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -163,8 +156,8 @@
         <option value="$PROJECT_DIR$/web/AtmManager.dart" />
         <option value="$PROJECT_DIR$/web/main.dart" />
         <option value="$PROJECT_DIR$/web/index.html" />
-        <option value="$PROJECT_DIR$/test/Atm_test.dart" />
         <option value="$PROJECT_DIR$/web/lib/Atm.dart" />
+        <option value="$PROJECT_DIR$/test/Atm_test.dart" />
       </list>
     </option>
   </component>
@@ -186,6 +179,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -217,7 +211,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -241,10 +234,28 @@
     </option>
   </component>
   <component name="RunManager" selected="JavaScript Debug.index.html">
-    <configuration name="GetMoney_ValidArgument_CheckReturnValue in Atm_test.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
+    <configuration name="GetMoney_ValidArgument_CheckOneValue in Atm_test.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
       <option name="filePath" value="$PROJECT_DIR$/test/Atm_test.dart" />
       <option name="scope" value="GROUP_OR_TEST_BY_NAME" />
-      <option name="testName" value="GetMoney_ValidArgument_CheckReturnValue" />
+      <option name="testName" value="GetMoney_ValidArgument_CheckOneValue" />
+      <method v="2" />
+    </configuration>
+    <configuration name="GetMoney_ValidArgument_Return15And1Bills in Atm_test.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/test/Atm_test.dart" />
+      <option name="scope" value="GROUP_OR_TEST_BY_NAME" />
+      <option name="testName" value="GetMoney_ValidArgument_Return15And1Bills" />
+      <method v="2" />
+    </configuration>
+    <configuration name="GetMoney_ValidArgument_ReturnFiveBills in Atm_test.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/test/Atm_test.dart" />
+      <option name="scope" value="GROUP_OR_TEST_BY_NAME" />
+      <option name="testName" value="GetMoney_ValidArgument_ReturnFiveBills" />
+      <method v="2" />
+    </configuration>
+    <configuration name="GetMoney_ValidArgument_ReturnOneBills in Atm_test.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/test/Atm_test.dart" />
+      <option name="scope" value="GROUP_OR_TEST_BY_NAME" />
+      <option name="testName" value="GetMoney_ValidArgument_ReturnOneBills" />
       <method v="2" />
     </configuration>
     <configuration name="tests in Atm_test.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
@@ -252,32 +263,24 @@
       <option name="testName" value="Atm_test.dart" />
       <method v="2" />
     </configuration>
-    <configuration name="tests in BillContainer_test.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/test/BillContainer_test.dart" />
-      <option name="testName" value="BillContainer_test.dart" />
-      <method v="2" />
-    </configuration>
-    <configuration name="tests in Bill_test.dart" type="DartTestRunConfigurationType" factoryName="Dart Test" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/test/Bill_test.dart" />
-      <option name="testName" value="Bill_test.dart" />
-      <method v="2" />
-    </configuration>
     <configuration name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" uri="http://localhost:63342/Atm/web/index.html">
       <method v="2" />
     </configuration>
     <list>
       <item itemvalue="JavaScript Debug.index.html" />
-      <item itemvalue="Dart Test.tests in Bill_test.dart" />
-      <item itemvalue="Dart Test.tests in BillContainer_test.dart" />
       <item itemvalue="Dart Test.tests in Atm_test.dart" />
-      <item itemvalue="Dart Test.GetMoney_ValidArgument_CheckReturnValue in Atm_test.dart" />
+      <item itemvalue="Dart Test.GetMoney_ValidArgument_ReturnFiveBills in Atm_test.dart" />
+      <item itemvalue="Dart Test.GetMoney_ValidArgument_ReturnOneBills in Atm_test.dart" />
+      <item itemvalue="Dart Test.GetMoney_ValidArgument_CheckOneValue in Atm_test.dart" />
+      <item itemvalue="Dart Test.GetMoney_ValidArgument_Return15And1Bills in Atm_test.dart" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Dart Test.GetMoney_ValidArgument_Return15And1Bills in Atm_test.dart" />
+        <item itemvalue="Dart Test.GetMoney_ValidArgument_ReturnOneBills in Atm_test.dart" />
         <item itemvalue="Dart Test.tests in Atm_test.dart" />
-        <item itemvalue="Dart Test.tests in Bill_test.dart" />
-        <item itemvalue="Dart Test.GetMoney_ValidArgument_CheckReturnValue in Atm_test.dart" />
-        <item itemvalue="Dart Test.tests in BillContainer_test.dart" />
+        <item itemvalue="Dart Test.GetMoney_ValidArgument_CheckOneValue in Atm_test.dart" />
+        <item itemvalue="Dart Test.GetMoney_ValidArgument_ReturnFiveBills in Atm_test.dart" />
       </list>
     </recent_temporary>
   </component>
@@ -308,43 +311,44 @@
       <workItem from="1541740035931" duration="2063000" />
       <workItem from="1541742268682" duration="626000" />
       <workItem from="1541838324944" duration="4969000" />
+      <workItem from="1541847371553" duration="3282000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="tests_in_Atm_test_dart - 2018.11.10 at 12h 21m 08s.xml">
+    <history-entry file="GetMoney_ValidArgument_ReturnFiveBills_in_Atm_test_dart - 2018.11.10 at 14h 35m 15s.xml">
+      <configuration name="GetMoney_ValidArgument_ReturnFiveBills in Atm_test.dart" configurationId="DartTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="GetMoney_ValidArgument_CheckOneValue_in_Atm_test_dart - 2018.11.10 at 14h 35m 15s.xml">
+      <configuration name="GetMoney_ValidArgument_CheckOneValue in Atm_test.dart" configurationId="DartTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="tests_in_Atm_test_dart - 2018.11.10 at 14h 35m 57s.xml">
       <configuration name="tests in Atm_test.dart" configurationId="DartTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="tests_in_Atm_test_dart - 2018.11.10 at 12h 22m 34s.xml">
+    <history-entry file="GetMoney_ValidArgument_CheckOneValue_in_Atm_test_dart - 2018.11.10 at 14h 36m 39s.xml">
+      <configuration name="GetMoney_ValidArgument_CheckOneValue in Atm_test.dart" configurationId="DartTestRunConfigurationType" />
+    </history-entry>
+    <history-entry file="tests_in_Atm_test_dart - 2018.11.10 at 14h 36m 55s.xml">
       <configuration name="tests in Atm_test.dart" configurationId="DartTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="tests_in_Atm_test_dart - 2018.11.10 at 12h 22m 41s.xml">
-      <configuration name="tests in Atm_test.dart" configurationId="DartTestRunConfigurationType" />
+    <history-entry file="GetMoney_ValidArgument_ReturnOneBills_in_Atm_test_dart - 2018.11.10 at 14h 46m 05s.xml">
+      <configuration name="GetMoney_ValidArgument_ReturnOneBills in Atm_test.dart" configurationId="DartTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="tests_in_Atm_test_dart - 2018.11.10 at 12h 29m 46s.xml">
-      <configuration name="tests in Atm_test.dart" configurationId="DartTestRunConfigurationType" />
+    <history-entry file="GetMoney_ValidArgument_Return15And1Bills_in_Atm_test_dart - 2018.11.10 at 14h 47m 01s.xml">
+      <configuration name="GetMoney_ValidArgument_Return15And1Bills in Atm_test.dart" configurationId="DartTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="tests_in_Atm_test_dart - 2018.11.10 at 12h 34m 28s.xml">
-      <configuration name="tests in Atm_test.dart" configurationId="DartTestRunConfigurationType" />
+    <history-entry file="GetMoney_ValidArgument_Return15And1Bills_in_Atm_test_dart - 2018.11.10 at 14h 47m 51s.xml">
+      <configuration name="GetMoney_ValidArgument_Return15And1Bills in Atm_test.dart" configurationId="DartTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="tests_in_Atm_test_dart - 2018.11.10 at 12h 37m 59s.xml">
-      <configuration name="tests in Atm_test.dart" configurationId="DartTestRunConfigurationType" />
+    <history-entry file="GetMoney_ValidArgument_Return15And1Bills_in_Atm_test_dart - 2018.11.10 at 14h 50m 13s.xml">
+      <configuration name="GetMoney_ValidArgument_Return15And1Bills in Atm_test.dart" configurationId="DartTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="tests_in_Atm_test_dart - 2018.11.10 at 12h 38m 35s.xml">
-      <configuration name="tests in Atm_test.dart" configurationId="DartTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="tests_in_Atm_test_dart - 2018.11.10 at 12h 41m 20s.xml">
-      <configuration name="tests in Atm_test.dart" configurationId="DartTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="tests_in_Atm_test_dart - 2018.11.10 at 12h 42m 32s.xml">
-      <configuration name="tests in Atm_test.dart" configurationId="DartTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="tests_in_Atm_test_dart - 2018.11.10 at 12h 47m 32s.xml">
-      <configuration name="tests in Atm_test.dart" configurationId="DartTestRunConfigurationType" />
+    <history-entry file="GetMoney_ValidArgument_Return15And1Bills_in_Atm_test_dart - 2018.11.10 at 14h 51m 21s.xml">
+      <configuration name="GetMoney_ValidArgument_Return15And1Bills in Atm_test.dart" configurationId="DartTestRunConfigurationType" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59769000" />
+    <option name="totallyTimeSpent" value="63051000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -358,7 +362,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18710022" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18703899" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -391,11 +395,19 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/test/Atm_test.dart</url>
-          <line>81</line>
-          <option name="timeStamp" value="31" />
+          <url>file://$PROJECT_DIR$/web/lib/Atm.dart</url>
+          <line>20</line>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/web/lib/Atm.dart</url>
+          <line>41</line>
+          <option name="timeStamp" value="58" />
         </line-breakpoint>
       </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -483,9 +495,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="10" column="76" selection-start-line="10" selection-start-column="76" selection-end-line="10" selection-end-column="76" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -493,9 +502,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="528">
           <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -548,17 +554,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/Atm_test.dart">
+    <entry file="file://$PROJECT_DIR$/web/lib/Atm.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="81" column="4" selection-start-line="81" selection-start-column="4" selection-end-line="81" selection-end-column="4" />
+        <state relative-caret-position="681">
+          <caret line="41" column="4" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/lib/Atm.dart">
+    <entry file="file://$PROJECT_DIR$/test/Atm_test.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1161">
-          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
+        <state relative-caret-position="246">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
         </state>
       </provider>
     </entry>

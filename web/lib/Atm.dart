@@ -21,12 +21,21 @@ class Atm{
     int tempChange = _MaxValue;
 
     for(int k = 0; k < _billContainer.Count; k++) {
+      var bill = _billContainer.Bills[k];
+      if (bill.Value > cash) continue;
+      var index = (k + 1 >= _billContainer.Count) ? k : k + 1;
 
-      var bills = _getBills(k, cash);
+      for(int i  = index; i < _billContainer.Count; i++) {
+        var bills = new Map<IBill, int>();
+        bills.putIfAbsent(bill, () => 1);
+        bills = _getBills(bills, i, cash - bill.Value);
 
-      if(bills.length > maxBills.length || (_cash >= 0 && _cash < tempChange && bills.length == maxBills.length)){
-        maxBills = bills;
-        tempChange = _cash;
+        if (bills.length > maxBills.length ||
+            (_cash >= 0 && _cash < tempChange &&
+                bills.length == maxBills.length)) {
+          maxBills = bills;
+          tempChange = _cash;
+        }
       }
     }
 
@@ -34,13 +43,14 @@ class Atm{
   }
 
 
-  Map<IBill, int> _getBills(int startIndex,  int cash){
-    var bills = new Map<IBill, int>();
+
+
+  Map<IBill, int> _getBills(Map<IBill, int> bills, int startIndex,  int cash){
     _cash = cash;
 
     for (int i = startIndex; i < _billContainer.Count; i++) {
       var bill = _billContainer.Bills[i];
-      if (bill.Value > cash) break;
+      if (bill.Value > cash || bills.containsKey(bill)) break;//todo dublicate
 
       cash -= bill.Value;
       bills.putIfAbsent(bill, () => 1);
